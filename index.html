@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travelsy — ტურისტული სააგენტო</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="top"></div>
+        <div class="header-container">
+            <div class="logo">Travelsly</div>
+            <div class="navigation">
+                <button id="BurgerClose" class="BurgerClose Btn">დახურვა</button>
+                <ul class="ui-element">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <button id="AuthButton" class="Btn">ავტორიზაცია</button>
+            </div>
+            <button id="BurgerBtn" class="Burger Btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <section class="section1">
+      <div class="TourSearch">
+        <h1>იპოვე შენი მომდევნო მოგზაურობა Travelsly-სთან ერთად</h1>
+        <p>ჩვენ ვაწყობთ ტურებს შენი სურვილისა და ბიუჯეტის მიხედვით.</p>
+
+        <form id="TourSearch">
+          <input type="text" id="destination" placeholder="სად მიდიხართ?" required />
+          <input type="date" id="depart" required />
+          <button type="submit" class="Btn">ძებნა</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="destinations" class="section2">
+      <div class="container">
+        <h2 class="logo">პოპულარული მიმართულებები</h2>
+
+        <div class="Cards">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80" alt="სანტორინი" />
+            <h3>სანტორინი, საბერძნეთი</h3>
+            <p>ლურჯი გუმბათები და ეგეოსის ზე ჩასვენდა მზე.</p>
+            <span class="price">$890-დან</span>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=600&q=80" alt="კიოტო" />
+            <h3>კიოტო, იაპონია</h3>
+            <p>ბამბუკის ტყეები და ძველი ტაძრები.</p>
+            <span class="price">$1240-დან</span>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=600&q=80" alt="თბილისი" />
+            <h3>თბილისი, საქართველო</h3>
+            <p>გოგირდის აბანოები და ღვინის რეგიონები.</p>
+            <span class="price">$540-დან</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="WhyUs" class="WhyUs">
+      <div class="container2">
+        <div class="WhyUsText">
+          <h2>რატომ Travelsy</h2>
+          <p>ყველა მარშრუტი ხელით არჩეულია — შენი დროის,</p>
+          <p>ბიუჯეტისა და ინტერესის მიხედვით.</p>
+          <ul>
+            <li>ადგილობრივი გიდები</li>
+            <li>მოქნილი გრაფიკი</li>
+            <li>24/7 მხარდაჭერა</li>
+          </ul>
+        </div>
+        <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=600&q=80" alt="მოგზაური მთებში" class="WhyImage" />
+      </div>
+    </section>
+
+    <section id="Guides" class="container4">
+      <div class="container3">
+        <h2>გაიცანი ჩვენი გიდები</h2>
+        <p class="Muted">მონაცემები ჩაიტვირთება სერვერიდან</p>
+
+        <div class="CardGrid" id="GuidesGrid">
+          <p>იტვირთება...</p>
+        </div>
+
+        <button id="loadGuidesBtn" class="Btn">სხვა გიდების ჩვენება</button>
+      </div>
+    </section>
+
+    <section class="section" id="Rewievs">
+      <div class="container3">
+        <h2>მოგზაურების შეფასებები</h2>
+        <div class="Cards">
+          <article class="ReviewCard">
+            <p>„გამოცდილება სრულად ჩვენზე იყო მორგებული."</p>
+            <strong>ანი მ.</strong>
+          </article>
+          <article class="ReviewCard">
+            <p>„24 საათში გვიპასუხეს ფრენის გადავაგვიანების დროს."</p>
+            <strong>გიორგი ქ.</strong>
+          </article>
+          <article class="ReviewCard">
+            <p>„გრძნობა იყო, რომ მეგობარი გვიწევდა გზამკვლევობას."</p>
+            <strong>მარიამ ლ.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2026 Travelsy. ყველა უფლება დაცულია.</p>
+      </div>
+    </footer>
+
+
+
+    <div class="Cookie" id="Cookie">
+      <p>ვიყენებთ cookie-ებს საიტის გასაუმჯობესებლად.</p>
+      <button id="CookieAcceptBtn" class="Btn">თანახმა ვარ</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
