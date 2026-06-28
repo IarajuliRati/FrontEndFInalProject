@@ -113,3 +113,17 @@ document.getElementById('ShowPass2').addEventListener('click', function() {
   document.getElementById('ShowPass2').style.display = 'none';
   document.getElementById('ShowPass').style.display = 'block';
 });
+
+document.getElementById('AuthForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const password = document.getElementById('password').value;
+  const passwordRegex = /^(?=.*\d).{6,}$/;
+
+  if (!passwordRegex.test(password)) {
+    alert('პაროლი მინიმუმ 6 სიმბოლო და ერთი ციფრი უნდა შეიცავდეს!');
+    return;
+  }
+
+  alert('წარმატებით შეხვედით!');
+});
