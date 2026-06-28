@@ -5,24 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travelsy — ტურისტული სააგენტო</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="reset.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
         <div class="top"></div>
         <div class="header-container">
-            <div class="logo">Travelsly</div>
+            <h2 class="logo">Travelsly</h2>
             <div class="navigation">
-                <button id="BurgerClose" class="BurgerClose Btn">დახურვა</button>
+              <h2 class="logo">მენიუ</h2>
                 <ul class="ui-element">
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">News</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
-                <button id="AuthButton" class="Btn">ავტორიზაცია</button>
+                <button id="AuthBtn" class="Btn">ავტორიზაცია</button>
+                <button id="BurgerClose" class="BurgerClose Btn">დახურვა</button>
             </div>
             <button id="BurgerBtn" class="Burger Btn"><i class="fa-solid fa-bars"></i></button>
         </div>
@@ -73,7 +74,7 @@
     <section id="WhyUs" class="WhyUs">
       <div class="container2">
         <div class="WhyUsText">
-          <h2>რატომ Travelsy</h2>
+          <h2 class="logo">რატომ Travelsy ?</h2>
           <p>ყველა მარშრუტი ხელით არჩეულია — შენი დროის,</p>
           <p>ბიუჯეტისა და ინტერესის მიხედვით.</p>
           <ul>
@@ -88,8 +89,7 @@
 
     <section id="Guides" class="container4">
       <div class="container3">
-        <h2>გაიცანი ჩვენი გიდები</h2>
-        <p class="Muted">მონაცემები ჩაიტვირთება სერვერიდან</p>
+        <h2 class="logo">გაიცანი ჩვენი გიდები</h2>
 
         <div class="CardGrid" id="GuidesGrid">
           <p>იტვირთება...</p>
@@ -101,7 +101,7 @@
 
     <section class="section" id="Rewievs">
       <div class="container3">
-        <h2>მოგზაურების შეფასებები</h2>
+        <h2 class="logo">მოგზაურების შეფასებები</h2>
         <div class="Cards">
           <article class="ReviewCard">
             <p>„გამოცდილება სრულად ჩვენზე იყო მორგებული."</p>
@@ -133,6 +133,27 @@
       <p>ვიყენებთ cookie-ებს საიტის გასაუმჯობესებლად.</p>
       <button id="CookieAcceptBtn" class="Btn">თანახმა ვარ</button>
     </div>
+
+
+
+    <section class="Authorisation">
+      <div class="AuthForm">
+        <h2 class="logo">ავტორიზაცია</h2>
+        <form id="AuthForm">
+          <input type="email" id="email" placeholder="ელ.ფოსტა" required />
+          <div style="position: relative; display: flex; align-items: center;">
+            <input type="password" id="password" placeholder="პაროლი" required style="width: 100%;" />
+            <button id="ShowPass" class="ShowPass" type="button" ><i class="fa-solid fa-eye-slash"></i></button>
+            <button id="ShowPass2" class="ShowPass" type="button" ><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <button type="submit" class="Btn">შესვლა</button>
+        </form>
+        <button id="AuthCloseBtn" class="Btn">დახურვა</button>
+      </div>
+    </section>
+
+    <button id="ScrollBtn" class="ScrollBtn">▲</button>
+
     <script src="script.js"></script>
 </body>
 </html>

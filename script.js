@@ -1,12 +1,54 @@
-// ===========================================
-// 0. ბურგერ მენიუ
-// ===========================================
+const ScrollBtn = document.getElementById('ScrollBtn');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 1000) {
+    ScrollBtn.style.display = 'block';
+  } else {
+    ScrollBtn.style.display = 'none';
+  }
+});
+
+ScrollBtn.addEventListener('click', function () 
+{
+  window.scrollTo({
+    top: 0,
+  });
+});
+
+
+const AuthBtn = document.getElementById('AuthBtn');
+const Authorisation = document.querySelector('.Authorisation');
+AuthBtn.addEventListener('click', function () 
+{
+  if (BurgerBtn.classList.contains('open'))
+  {
+    Navigation.classList.remove('open');
+    BurgerBtn.classList.remove('open');
+  }
+  if (Authorisation.classList.contains('show'))
+  {
+    Authorisation.classList.remove('show');
+  }
+  else
+  {
+    Authorisation.classList.add('show');
+  }
+});  
+AuthCloseBtn.addEventListener('click', function () 
+{
+  Authorisation.classList.remove('show');
+});
+
+
 const BurgerBtn = document.getElementById('BurgerBtn');
 const Navigation = document.querySelector('.navigation');
 
 BurgerBtn.addEventListener('click', function () {
   Navigation.classList.toggle('open');
   BurgerBtn.classList.toggle('open');
+  if (Authorisation.classList.contains('show'))
+  {
+    Authorisation.classList.remove('show');
+  }
 });
 BurgerClose.addEventListener('click', function () {
   Navigation.classList.remove('open');
@@ -14,25 +56,19 @@ BurgerClose.addEventListener('click', function () {
 });
 
 
-// ===========================================
-// 1. Cookie შეტყობინება (უბრალო გამოჩენა/დამალვა)
-// ===========================================
+
 const Cookie = document.getElementById('Cookie');
 const CookieAcceptBtn = document.getElementById('CookieAcceptBtn');
-
-// გვერდის ჩატვირთვისთანავე ბანერი ჩაირთვება
-Cookie.classList.add('show');
-
-// ღილაკზე დაჭერისას ბანერი დაიმალება
+if (!localStorage.getItem('cookieAccepted')) {
+  Cookie.classList.add('show');
+}
 CookieAcceptBtn.addEventListener('click', function () {
   Cookie.classList.remove('show');
+  localStorage.setItem('cookieAccepted', 'true');
 });
 
 
-// ===========================================
-// 2. გიდების ჩატვირთვა სერვერიდან (RandomUser API)
-//    fetch + async/await
-// ===========================================
+
 const guidesGrid = document.getElementById('GuidesGrid');
 const loadGuidesBtn = document.getElementById('loadGuidesBtn');
 
@@ -61,6 +97,19 @@ async function loadGuides() {
 }
 
 loadGuidesBtn.addEventListener('click', loadGuides);
-
-// გვერდის გახსნისთანავე ჩატვირთე გიდები
 loadGuides();
+
+
+document.getElementById('ShowPass').addEventListener('click', function() {
+  const p = document.getElementById('password');
+  p.type = 'text';
+  document.getElementById('ShowPass').style.display = 'none';
+  document.getElementById('ShowPass2').style.display = 'block';
+});
+
+document.getElementById('ShowPass2').addEventListener('click', function() {
+  const p = document.getElementById('password');
+  p.type = 'password';
+  document.getElementById('ShowPass2').style.display = 'none';
+  document.getElementById('ShowPass').style.display = 'block';
+});
