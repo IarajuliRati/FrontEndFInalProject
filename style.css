@@ -94,6 +94,11 @@ header {
   margin-left: 20px;
 }
 
+#LogoutBtn {
+  display: none;
+  width: 148px;
+}
+
 .navigation h2 {
   color: var(--white);
 }

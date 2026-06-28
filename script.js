@@ -17,6 +17,7 @@ ScrollBtn.addEventListener('click', function ()
 
 const AuthBtn = document.getElementById('AuthBtn');
 const Authorisation = document.querySelector('.Authorisation');
+const LogoutBtn = document.getElementById('LogoutBtn');
 AuthBtn.addEventListener('click', function () 
 {
   if (BurgerBtn.classList.contains('open'))
@@ -33,6 +34,30 @@ AuthBtn.addEventListener('click', function ()
     Authorisation.classList.add('show');
   }
 });  
+
+document.getElementById('AuthForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const password = document.getElementById('password').value;
+  const passwordRegex = /^(?=.*\d).{6,}$/;
+
+  if (!passwordRegex.test(password)) {
+    alert('პაროლი უნა იყოს მინიმუმ 6 სიმბოლო და შეიცავდეს ერთ ციფრს!');
+    return;
+  }
+
+  alert('წარმატებით შეხვედით!');
+  Authorisation.classList.remove('show');
+  LogoutBtn.style.display = 'block';
+  AuthBtn.style.display = 'none';
+});
+
+LogoutBtn.addEventListener('click', function() {
+  alert('წარმატებით გამოსვლა!');  
+  LogoutBtn.style.display = 'none';
+  AuthBtn.style.display = 'block';
+});
+
 AuthCloseBtn.addEventListener('click', function () 
 {
   Authorisation.classList.remove('show');
@@ -114,16 +139,3 @@ document.getElementById('ShowPass2').addEventListener('click', function() {
   document.getElementById('ShowPass').style.display = 'block';
 });
 
-document.getElementById('AuthForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const password = document.getElementById('password').value;
-  const passwordRegex = /^(?=.*\d).{6,}$/;
-
-  if (!passwordRegex.test(password)) {
-    alert('პაროლი მინიმუმ 6 სიმბოლო და ერთი ციფრი უნდა შეიცავდეს!');
-    return;
-  }
-
-  alert('წარმატებით შეხვედით!');
-});
