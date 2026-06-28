@@ -53,7 +53,7 @@ document.getElementById('AuthForm').addEventListener('submit', function(e) {
 });
 
 LogoutBtn.addEventListener('click', function() {
-  alert('წარმატებით გამოსვლა!');  
+  alert('წარმატებით გამოხვედით!');  
   LogoutBtn.style.display = 'none';
   AuthBtn.style.display = 'block';
 });
