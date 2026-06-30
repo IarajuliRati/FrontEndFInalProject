@@ -1,3 +1,6 @@
+
+/*=============================ზემოთ ასვლის ღილაკი=============================*/
+
 const ScrollBtn = document.getElementById('ScrollBtn');
 window.addEventListener('scroll', function () {
   if (window.scrollY > 1000) {
@@ -14,6 +17,21 @@ ScrollBtn.addEventListener('click', function ()
   });
 });
 
+document.getElementById('ShowPass').addEventListener('click', function() {
+  const p = document.getElementById('password');
+  p.type = 'text';
+  document.getElementById('ShowPass').style.display = 'none';
+  document.getElementById('ShowPass2').style.display = 'block';
+});
+
+document.getElementById('ShowPass2').addEventListener('click', function() {
+  const p = document.getElementById('password');
+  p.type = 'password';
+  document.getElementById('ShowPass2').style.display = 'none';
+  document.getElementById('ShowPass').style.display = 'block';
+});
+
+/*=============================ავტორიზაცია=============================*/
 
 const AuthBtn = document.getElementById('AuthBtn');
 const Authorisation = document.querySelector('.Authorisation');
@@ -63,6 +81,7 @@ AuthCloseBtn.addEventListener('click', function ()
   Authorisation.classList.remove('show');
 });
 
+/*=============================ბურგერ-ბარი=============================*/
 
 const BurgerBtn = document.getElementById('BurgerBtn');
 const Navigation = document.querySelector('.navigation');
@@ -80,7 +99,7 @@ BurgerClose.addEventListener('click', function () {
   BurgerBtn.classList.remove('open');
 });
 
-
+/*=============================ქუქისი=============================*/
 
 const Cookie = document.getElementById('Cookie');
 const CookieAcceptBtn = document.getElementById('CookieAcceptBtn');
@@ -92,7 +111,7 @@ CookieAcceptBtn.addEventListener('click', function () {
   localStorage.setItem('cookieAccepted', 'true');
 });
 
-
+/*=============================გიდები=============================*/
 
 const guidesGrid = document.getElementById('GuidesGrid');
 const loadGuidesBtn = document.getElementById('loadGuidesBtn');
@@ -123,19 +142,3 @@ async function loadGuides() {
 
 loadGuidesBtn.addEventListener('click', loadGuides);
 loadGuides();
-
-
-document.getElementById('ShowPass').addEventListener('click', function() {
-  const p = document.getElementById('password');
-  p.type = 'text';
-  document.getElementById('ShowPass').style.display = 'none';
-  document.getElementById('ShowPass2').style.display = 'block';
-});
-
-document.getElementById('ShowPass2').addEventListener('click', function() {
-  const p = document.getElementById('password');
-  p.type = 'password';
-  document.getElementById('ShowPass2').style.display = 'none';
-  document.getElementById('ShowPass').style.display = 'block';
-});
-

@@ -10,13 +10,12 @@
 
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
-  color: #2B2B2B;
+  color: var(--text-muted);
   background-color: var(--cream);
 }
 
-/* ===========================================
-   ღილაკები
-=========================================== */
+/*=============================ღილაკები=============================*/
+
 .Btn {
   display: inline-block;
   background-color: var(--gold);
@@ -36,6 +35,8 @@ body {
   transform: scale(1.05);
 }
 
+/*=============================ჰედერი/რავიგაცია=============================*/
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -43,9 +44,6 @@ body {
   color: var(--navy);
 }
 
-/* ===========================================
-   ჰედერი
-=========================================== */
 .top {
   background-color: var(--navy);
   width: 100%;
@@ -77,6 +75,7 @@ header {
   display: flex;
   align-items: center;
   gap: 30px;
+  font-size: 1.5vi;
 }
 
 .navigation a {
@@ -103,253 +102,6 @@ header {
   color: var(--white);
 }
 
-/* ===========================================
-   ჰერო (TourSearch)
-=========================================== */
-.section1 {
-  width: 100%;
-  height: 500px;
-  background-color: var(--navy);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.TourSearch {
-  height: 200px;
-  width: 500px;
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.TourSearch h1 {
-  color: var(--white);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem;
-}
-
-.TourSearch p {
-  color: var(--white);
-  opacity: 0.85;
-}
-
-.TourSearch input {
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-/* ===========================================
-   მიმართულებები (destinations)
-=========================================== */
-.container {
-  width: 100%;
-  background-color: var(--cream);
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.Cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  width: 100%;
-  padding: 20px;
-}
-
-.card {
-  flex: 1 1 280px;
-  max-width: 340px;
-  background-color: var(--white);
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.card h3 {
-  color: var(--navy);
-  margin-top: 12px;
-}
-
-.price {
-  display: block;
-  margin-top: 10px;
-  font-weight: 700;
-  color: var(--terracotta);
-}
-
-/* ===========================================
-   რატომ ჩვენ (WhyUs)
-=========================================== */
-.container2 {
-  width: 100%;
-  background-color: var(--cream-alt);
-  text-align: center;
-  padding: 60px 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.WhyUsText {
-  text-align: left;
-}
-
-.WhyUsText h2 {
-  color: var(--navy);
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 12px;
-}
-
-.WhyUsText p {
-  color: var(--text-muted);
-}
-
-.WhyUsText ul {
-  margin-top: 16px;
-}
-
-.WhyUsText li {
-  padding: 8px 0;
-  color: var(--navy);
-  font-weight: 500;
-}
-
-.WhyImage {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* ===========================================
-   გიდები (Guides)
-=========================================== */
-.container4 {
-  padding: 30px;
-  background-color: var(--cream);
-}
-
-.container3 {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.Muted {
-  color: var(--text-muted);
-  margin-bottom: 30px;
-}
-
-.CardGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 30px;
-}
-
-.CardGrid .card {
-  flex: 0 1 260px;
-}
-
-#loadGuidesBtn {
-  margin-top: 30px;
-}
-
-/* ===========================================
-   შეფასებები (Reviews)
-=========================================== */
-.section {
-  padding: 30px;
-  background-color: var(--cream-alt);
-}
-
-.ReviewCard {
-  background-color: var(--white);
-  border-radius: 10px;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: left;
-}
-
-.ReviewCard p {
-  font-style: italic;
-  color: var(--text-muted);
-  margin-bottom: 12px;
-}
-
-.ReviewCard strong {
-  color: var(--navy);
-}
-
-/* ===========================================
-   ფუტერი
-=========================================== */
-footer {
-  background-color: var(--navy);
-  color: var(--white);
-}
-
-.footer-container {
-  text-align: center;
-  padding: 24px 0;
-}
-
-/* ===========================================
-   Cookie შეტყობინება
-=========================================== */
-.Cookie {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  max-width: 420px;
-  background-color: var(--navy);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  color: var(--white);
-  padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: none;
-  align-items: center;
-  gap: 14px;
-  z-index: 999;
-}
-
-.Cookie.show {
-  display: flex;
-}
-
-.Cookie p {
-  flex: 1;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
 .Burger {
   display: none;
 }
@@ -357,6 +109,8 @@ footer {
 .BurgerClose{
   display: none;
 }
+
+/*=============================ავტორიზაცია=============================*/
 
 .Authorisation {
   position: fixed;
@@ -381,6 +135,12 @@ footer {
   flex-direction: column;
   gap: 14px;
   width: 100%;
+}
+
+.PassForm{
+  position: relative; 
+  display: flex; 
+  align-items: center;
 }
 
 .AuthForm h2 {
@@ -436,6 +196,235 @@ footer {
   display: none;
 }
 
+/*=============================სერჩი=============================*/
+
+.section1 {
+  width: 100%;
+  height: 500px;
+  background-color: var(--navy);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TourSearch {
+  height: 200px;
+  width: 500px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.TourSearch h1 {
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+}
+
+.TourSearch p {
+  color: var(--white);
+  opacity: 0.85;
+}
+
+.TourSearch input {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/*=============================მიმართულებები=============================*/
+.container {
+  width: 100%;
+  background-color: var(--cream);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  flex: 1 1 280px;
+  max-width: 340px;
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: var(--navy);
+  margin-top: 12px;
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+/*=============================რატომ ჩვენ=============================*/
+
+.container2 {
+  width: 100%;
+  background-color: var(--cream-alt);
+  text-align: center;
+  padding: 60px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.WhyUsText {
+  text-align: left;
+}
+
+.WhyUsText h2 {
+  color: var(--navy);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 12px;
+}
+
+.WhyUsText p {
+  color: var(--text-muted);
+}
+
+.WhyUsText ul {
+  margin-top: 16px;
+}
+
+.WhyUsText li {
+  padding: 8px 0;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.WhyImage {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/*=============================გიდები=============================*/
+
+.container4 {
+  padding: 30px;
+  background-color: var(--cream);
+}
+
+.container3 {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.Muted {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.CardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.CardGrid .card {
+  flex: 0 1 260px;
+}
+
+#loadGuidesBtn {
+  margin-top: 30px;
+}
+
+/*=============================შეფასებები=============================*/
+
+.section {
+  padding: 30px;
+  background-color: var(--cream-alt);
+}
+
+.ReviewCard {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.ReviewCard p {
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.ReviewCard strong {
+  color: var(--navy);
+}
+
+/*=============================ქუქისი=============================*/
+
+.Cookie {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 420px;
+  background-color: var(--navy);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: var(--white);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: none;
+  align-items: center;
+  gap: 14px;
+  z-index: 999;
+}
+
+.Cookie.show {
+  display: flex;
+}
+
+.Cookie p {
+  flex: 1;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/*=============================ზემოთ ასვლის ღილაკი=============================*/
+
 .ScrollBtn {
     position: fixed;
     bottom: 20px;
@@ -455,6 +444,20 @@ footer {
   color: var(--white);
   transform: scale(1.05);
 }
+
+/*=============================ფუტერი=============================*/
+
+footer {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.FooterFontainer {
+  text-align: center;
+  padding: 24px 0;
+}
+
+/*=============================რესფონსივი=============================*/
 
 @media (max-width: 1024px) {
   .TourSearch {

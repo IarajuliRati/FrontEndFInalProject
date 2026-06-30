@@ -15,12 +15,11 @@
         <div class="header-container">
             <h2 class="logo">Travelsly</h2>
             <div class="navigation">
-              <h2 class="logo">მენიუ</h2>
                 <ul class="ui-element">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="">მთავარი</a></li>
+                    <li><a href="">ჩვენ შესახებ</a></li>
+                    <li><a href="">სიახლეები</a></li>
+                    <li><a href="">კონტაქტი</a></li>
                 </ul>
                 <button id="AuthBtn" class="Btn">ავტორიზაცია</button>
                 <button id="LogoutBtn" class="Btn">გამოსვლა</button>
@@ -106,15 +105,15 @@
         <div class="Cards">
           <article class="ReviewCard">
             <p>„გამოცდილება სრულად ჩვენზე იყო მორგებული."</p>
-            <strong>ანი მ.</strong>
+            <h2>ანი მ.</h2>
           </article>
           <article class="ReviewCard">
             <p>„24 საათში გვიპასუხეს ფრენის გადავაგვიანების დროს."</p>
-            <strong>გიორგი ქ.</strong>
+            <h2>გიორგი ქ.</h2>
           </article>
           <article class="ReviewCard">
             <p>„გრძნობა იყო, რომ მეგობარი გვიწევდა გზამკვლევობას."</p>
-            <strong>მარიამ ლ.</strong>
+            <h2>მარიამ ლ.</h2>
           </article>
         </div>
       </div>
@@ -123,7 +122,7 @@
 
 
     <footer>
-      <div class="footer-container">
+      <div class="FooterContainer">
         <p>&copy; 2026 Travelsy. ყველა უფლება დაცულია.</p>
       </div>
     </footer>
@@ -142,7 +141,7 @@
         <h2 class="logo">ავტორიზაცია</h2>
         <form id="AuthForm">
           <input type="email" id="email" placeholder="ელ.ფოსტა" required />
-          <div style="position: relative; display: flex; align-items: center;">
+          <div class="PassForm">
             <input type="password" id="password" placeholder="პაროლი" required style="width: 100%;" />
             <button id="ShowPass" class="ShowPass" type="button" ><i class="fa-solid fa-eye-slash"></i></button>
             <button id="ShowPass2" class="ShowPass" type="button" ><i class="fa-solid fa-eye"></i></button>
