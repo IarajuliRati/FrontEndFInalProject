@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+/*=============================ჰედერი=============================*/
+
     <header>
         <div class="top"></div>
         <div class="header-container">
@@ -29,6 +32,26 @@
         </div>
     </header>
 
+/*=============================ავტორიზაცია=============================*/
+
+    <section class="Authorisation">
+      <div class="AuthForm">
+        <h2 class="logo">ავტორიზაცია</h2>
+        <form id="AuthForm">
+          <input type="email" id="email" placeholder="ელ.ფოსტა" required />
+          <div class="PassForm">
+            <input type="password" id="password" placeholder="პაროლი" required style="width: 100%;" />
+            <button id="ShowPass" class="ShowPass" type="button" ><i class="fa-solid fa-eye-slash"></i></button>
+            <button id="ShowPass2" class="ShowPass" type="button" ><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <button type="submit" class="Btn">შესვლა</button>
+        </form>
+        <button id="AuthCloseBtn" class="Btn">დახურვა</button>
+      </div>
+    </section>
+
+/*=============================სერჩი=============================*/
+
     <section class="section1">
       <div class="TourSearch">
         <h1>იპოვე შენი მომდევნო მოგზაურობა Travelsly-სთან ერთად</h1>
@@ -41,6 +64,8 @@
         </form>
       </div>
     </section>
+
+/*=============================მიმართულებები=============================*/
 
     <section id="destinations" class="section2">
       <div class="container">
@@ -71,6 +96,8 @@
       </div>
     </section>
 
+/*=============================რატომ ჩვენ=============================*/
+
     <section id="WhyUs" class="WhyUs">
       <div class="container2">
         <div class="WhyUsText">
@@ -87,6 +114,8 @@
       </div>
     </section>
 
+/*=============================გიდები=============================*/
+
     <section id="Guides" class="container4">
       <div class="container3">
         <h2 class="logo">გაიცანი ჩვენი გიდები</h2>
@@ -98,6 +127,8 @@
         <button id="loadGuidesBtn" class="Btn">სხვა გიდების ჩვენება</button>
       </div>
     </section>
+
+/*=============================შეფასებები=============================*/
 
     <section class="section" id="Rewievs">
       <div class="container3">
@@ -119,7 +150,7 @@
       </div>
     </section>
 
-
+/*=============================ფუტერი=============================*/
 
     <footer>
       <div class="FooterContainer">
@@ -127,7 +158,7 @@
       </div>
     </footer>
 
-
+/*=============================ქუქისი=============================*/
 
     <div class="Cookie" id="Cookie">
       <p>ვიყენებთ cookie-ებს საიტის გასაუმჯობესებლად.</p>
@@ -135,25 +166,11 @@
     </div>
 
 
-
-    <section class="Authorisation">
-      <div class="AuthForm">
-        <h2 class="logo">ავტორიზაცია</h2>
-        <form id="AuthForm">
-          <input type="email" id="email" placeholder="ელ.ფოსტა" required />
-          <div class="PassForm">
-            <input type="password" id="password" placeholder="პაროლი" required style="width: 100%;" />
-            <button id="ShowPass" class="ShowPass" type="button" ><i class="fa-solid fa-eye-slash"></i></button>
-            <button id="ShowPass2" class="ShowPass" type="button" ><i class="fa-solid fa-eye"></i></button>
-          </div>
-          <button type="submit" class="Btn">შესვლა</button>
-        </form>
-        <button id="AuthCloseBtn" class="Btn">დახურვა</button>
-      </div>
-    </section>
-
     <button id="ScrollBtn" class="ScrollBtn">▲</button>
 
+
     <script src="script.js"></script>
+
+    
 </body>
 </html>
