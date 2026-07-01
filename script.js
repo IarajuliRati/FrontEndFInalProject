@@ -5,6 +5,7 @@ document.querySelectorAll('.ui-element a').forEach(function(link) {
     BurgerBtn.classList.remove('open');
   });
 });
+
 /*=============================ზემოთ ასვლის ღილაკი=============================*/
 
 const ScrollBtn = document.getElementById('ScrollBtn');
