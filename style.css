@@ -8,6 +8,10 @@
   --text-muted: #5B6B75;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
   color: var(--text-muted);
@@ -60,7 +64,6 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  font-size: larger;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -75,7 +78,7 @@ header {
   display: flex;
   align-items: center;
   gap: 30px;
-  font-size: 1.5vi;
+  font-size: large;
 }
 
 .navigation a {
@@ -114,8 +117,7 @@ header {
 
 .Authorisation {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  inset: 0;
   transform: translate(-50%, -50%);
   display: none;
   width: 90%;
@@ -127,6 +129,8 @@ header {
   padding: 36px;
   border-radius: 14px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  background-color: rgba(14, 58, 83, 0.55);
+  z-index: 1100;
 }
 
 #AuthForm {

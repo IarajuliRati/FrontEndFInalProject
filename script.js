@@ -1,4 +1,10 @@
-
+// ლინკზე დაჭერისას მობილური მენიუ დაიხუროს
+document.querySelectorAll('.ui-element a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    Navigation.classList.remove('open');
+    BurgerBtn.classList.remove('open');
+  });
+});
 /*=============================ზემოთ ასვლის ღილაკი=============================*/
 
 const ScrollBtn = document.getElementById('ScrollBtn');
